@@ -1,9 +1,10 @@
 plugins {
     kotlin("jvm") version "2.1.0"
+    `maven-publish`
 }
 
 group = "cc.wordview.assis"
-version = "0.1.0"
+version = "0.1.1"
 
 repositories {
     mavenCentral()
@@ -19,4 +20,16 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(23)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = group.toString()
+            artifactId = rootProject.name
+            version = version
+
+            from(components["java"])
+        }
+    }
 }
