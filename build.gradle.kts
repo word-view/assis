@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cc.wordview.assis"
-version = "0.1.1"
+version = "0.1.2"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(21)
 }
 
 publishing {
