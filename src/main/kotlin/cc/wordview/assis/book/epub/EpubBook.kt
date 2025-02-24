@@ -24,6 +24,8 @@ class EpubBook(
 
     init {
         for (item in spine) {
+            if (item.idRef == "cover") continue
+
             val parsedPage = parsePage(item)
             pages.add(parsedPage)
         }

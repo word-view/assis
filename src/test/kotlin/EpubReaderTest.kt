@@ -58,9 +58,9 @@ class EpubReaderTest {
 
         assertEquals(19, book.manifestItems.size)
         assertEquals(22, book.files.size)
-        assertEquals(12, book.pages.size)
+        assertEquals(11, book.pages.size)
 
-        assertEquals(9, book.pages[1].body.size)
+        assertEquals(25, book.pages[1].body.size)
 
         assertNotNull(book.getCover())
     }
